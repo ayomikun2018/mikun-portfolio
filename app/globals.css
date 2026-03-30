@@ -1,0 +1,68 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #f8f9fc;
+  --foreground: #0b1d35;
+}
+
+.dark {
+  --background: #0b1d35;
+  --foreground: #f0f4f8;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--font-dm-sans), sans-serif;
+}
+
+/* Subtle warm gradient on light mode body */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 0%, rgba(30, 95, 232, 0.04), transparent),
+    radial-gradient(ellipse 60% 50% at 90% 20%, rgba(232, 90, 0, 0.03), transparent),
+    radial-gradient(ellipse 70% 40% at 50% 100%, rgba(30, 95, 232, 0.02), transparent);
+  pointer-events: none;
+}
+
+.dark body::before {
+  background:
+    radial-gradient(ellipse 80% 60% at 10% 0%, rgba(30, 95, 232, 0.08), transparent),
+    radial-gradient(ellipse 60% 50% at 90% 20%, rgba(232, 90, 0, 0.05), transparent);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e5fe8;
+  border-radius: 3px;
+}

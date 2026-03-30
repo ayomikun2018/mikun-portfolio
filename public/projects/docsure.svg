@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e5fe8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0b1d35;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg)" rx="12"/>
+  <circle cx="650" cy="100" r="180" fill="rgba(255,255,255,0.04)"/>
+  <circle cx="200" cy="400" r="120" fill="rgba(232,90,0,0.08)"/>
+  <text x="60" y="280" font-family="system-ui, sans-serif" font-size="42" font-weight="700" fill="rgba(255,255,255,0.9)">Docsure AI</text>
+  <text x="60" y="320" font-family="system-ui, sans-serif" font-size="18" fill="rgba(255,255,255,0.5)">AI-powered healthcare scheduling</text>
+</svg>
